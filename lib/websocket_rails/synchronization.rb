@@ -70,6 +70,7 @@ module WebsocketRails
 
     def synchronize!
       unless @synchronizing
+        @synchronizing = true
         @server_token = generate_server_token
         register_server(@server_token)
 
@@ -94,8 +95,6 @@ module WebsocketRails
 
           info "Beginning Synchronization"
         end
-
-        @synchronizing = true
 
         EM.next_tick { synchro.resume }
 
