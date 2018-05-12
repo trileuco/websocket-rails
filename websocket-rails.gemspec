@@ -21,6 +21,7 @@ Gem::Specification.new do |s|
   s.add_dependency "rails"
   s.add_dependency "rack"
   s.add_dependency "faye-websocket"
+  s.add_dependency "permessage_deflate"
   s.add_dependency "thin"
   s.add_dependency "redis"
   s.add_dependency "hiredis"

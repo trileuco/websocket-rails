@@ -1,3 +1,5 @@
+require 'permessage_deflate'
+
 module WebsocketRails
   module ConnectionAdapters
     class WebSocket < Base
@@ -8,7 +10,7 @@ module WebsocketRails
 
       def initialize(request, dispatcher)
         super
-        @connection = Faye::WebSocket.new(request.env)
+        @connection = Faye::WebSocket.new(request.env, nil, :extensions => [PermessageDeflate])
         @connection.onmessage = method(:on_message)
         @connection.onerror   = method(:on_error)
         @connection.onclose   = method(:on_close)

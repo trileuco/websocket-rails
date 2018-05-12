@@ -18,6 +18,7 @@ gem "guard"
 gem "guard-rspec"
 gem "guard-coffeescript"
 gem "rb-fsevent"
+gem 'permessage_deflate'
 
 platforms :jruby do
   gem 'activerecord-jdbcsqlite3-adapter', :require => 'jdbc-sqlite3', :require => 'arjdbc'

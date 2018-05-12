@@ -5,6 +5,7 @@ PATH
       em-synchrony
       faye-websocket
       hiredis
+      permessage_deflate
       rack
       rails
       redis
@@ -113,6 +114,7 @@ GEM
     multi_json (1.9.0)
     nio4r (1.0.0)
     nio4r (1.0.0-java)
+    permessage_deflate (0.1.4)
     phantomjs (1.9.7.0)
     polyglot (0.3.4)
     pry (0.9.12.6)
@@ -229,6 +231,7 @@ DEPENDENCIES
   guard-rspec
   headless
   jasmine
+  permessage_deflate
   rake
   rb-fsevent
   rspec-matchers-matchers
@@ -241,3 +244,6 @@ DEPENDENCIES
   therubyrhino
   thin
   websocket-rails!
+
+BUNDLED WITH
+   1.16.1
