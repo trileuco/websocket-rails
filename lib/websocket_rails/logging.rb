@@ -101,6 +101,8 @@ module WebsocketRails
     end
 
     def colorize(color, text)
+      return text unless WebsocketRails.config.log_colorize?
+
       "\e[#{ANSI[color]}m#{text}\e[0m"
     end
 

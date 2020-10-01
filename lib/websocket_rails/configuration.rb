@@ -90,6 +90,14 @@ module WebsocketRails
       @log_internal_events = value
     end
 
+    def log_colorize?
+      @log_colorize.nil? ? true : @log_colorize
+    end
+
+    def log_colorize=(value)
+      @log_colorize = value
+    end
+
     def daemonize?
       @daemonize.nil? ? true : @daemonize
     end
