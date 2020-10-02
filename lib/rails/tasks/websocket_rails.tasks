@@ -9,6 +9,10 @@ namespace :websocket_rails do
 
     warn_if_standalone_not_enabled!
 
+    if WebsocketRails.config.autoflush_stdout_on_standalone?
+      STDOUT.sync = true
+    end
+
     if options[:daemonize]
       fork do
         Thin::Controllers::Controller.new(options).start

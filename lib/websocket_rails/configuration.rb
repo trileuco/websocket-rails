@@ -98,6 +98,14 @@ module WebsocketRails
       @log_colorize = value
     end
 
+    def autoflush_stdout_on_standalone?
+      @autoflush_stdout_on_standalone ||= false
+    end
+
+    def autoflush_stdout_on_standalone=(value)
+      @autoflush_stdout_on_standalone = value
+    end
+
     def daemonize?
       @daemonize.nil? ? true : @daemonize
     end
